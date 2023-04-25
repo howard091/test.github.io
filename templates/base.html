@@ -1,0 +1,21 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}
+  {% if title %}
+    <title>{{ title }}</title>
+  {% else %}
+    <title>flask app</title>
+  {% endif %}
+{% endblock %}
+    
+
+{% block world %}
+ {% include 'world.html' %}
+{% endblock %}
+    
+{% block content %}
+  <div class=" container">
+    {% block app_content%}
+    {% endblock %}
+  </div>
+{% endblock %}
